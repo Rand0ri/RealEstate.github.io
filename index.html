@@ -8,6 +8,10 @@
       href="https://fonts.googleapis.com/css?family=Josefin+Sans:300,400,400i|Nunito:300,300i"
       rel="stylesheet"
     />
+    <script
+      src="https://kit.fontawesome.com/5d5f6147b7.js"
+      crossorigin="anonymous"
+    ></script>
     <link rel="stylesheet" href="css/main.css" />
     <link rel="shortcut icon" type="image/png" href="img/favicon.ico" />
 
@@ -20,58 +24,104 @@
 
     <header class="header">
       <figure>
-
-        <img src="img/logo8.png" alt="Home logo" class="header__logo">
+        <img src="img/logo8.png" alt="Home logo" class="header__logo" />
         <h3 class="logo-text">EliteHomes</h3>
       </figure>
-      
+
       <h3 class="heading-3">
-          Ваш собственный дом:</h3>
+        Ваш собственный дом:
+      </h3>
       <h1 class="heading-1">Абсолютная личная свобода</h1>
-      <button id="modalBtn" class="btn header__btn">Выбрать недвижимость</button>
+      <button id="open" class="btn header__btn cta-btn open">
+        Выбрать недвижимость
+      </button>
       <div class="header__seenon-text">Наши партнёры</div>
       <div class="header__seenon-logos">
-          
-          <img src="img/sber2.png" alt="Seen on logo 1">
-          <img src="img/vtb_bank.png" alt="Seen on logo 2">
-          <img src="img/ростех.png" alt="Seen on logo 3">
-          <img src="img/lukoil.svg" alt="Seen on logo 4">
+        <img src="img/sber2.png" alt="Seen on logo 1" />
+        <img src="img/vtb_bank.png" alt="Seen on logo 2" />
+        <img src="img/ростех.png" alt="Seen on logo 3" />
+        <img src="img/lukoil.svg" alt="Seen on logo 4" />
       </div>
     </header>
-    <div id="simpleModal" class="modal">
-    <div class="modal-content">
-      <div class="images">
-          <span class="closeBtn">&times;</span>
-            <button type="button" class="btn_slider prevBtn">Prev</button>
-            <button type="button" class="btn_slider nextBtn">Next</button>
-            
+
+    <div class="modal-container" id="modal">
+      <div class="modal">
+        <button class="close-btn" id="close">
+          <i class="fa fa-times"></i>
+        </button>
+        <div class="modal-header">
+          <h2>Обратная связь</h2>
+        </div>
+        <div class="modal-content">
+          <p>Введите Ваши данные для обратной связи</p>
+          <form class="modal-form">
+            <div>
+              <label for="name">Ваше Имя</label>
+              <input
+                type="text"
+                id="name"
+                placeholder="Введите имя"
+                class="form-input"
+              />
+            </div>
+            <div>
+              <label for="email">Email</label>
+              <input
+                type="email"
+                id="email"
+                placeholder="Введите email"
+                class="form-input"
+              />
+            </div>
+            <div>
+              <label for="password">Пароль</label>
+              <input
+                type="password"
+                id="password"
+                placeholder="Введите пароль"
+                class="form-input"
+              />
+            </div>
+            <div>
+              <label for="password2">Подтвердите пароль</label>
+              <input
+                type="password"
+                id="password2"
+                placeholder="Подтвердите пароль"
+                class="form-input"
+              />
+            </div>
+            <input
+              type="submit"
+              value="Отправить заявку"
+              class="submit-btn btn"
+            />
+          </form>
         </div>
       </div>
-     
-  </div>
+    </div>
 
     <div class="realtors">
-     <h3 class="heading-3">Лучшие Риэлторы</h3>
-     <div class="realtors__list">
-         <img src="img/realtor-1.jpeg" alt="Realtor 1" class="realtors__img">
-         <div class="realtors__details">
-             <h4 class="heading-4 heading-4--light">Пётр Иванов</h4>
-             <p class="realtors__sold">245 домов продано</p>
-         </div>
+      <h3 class="heading-3">Лучшие Риэлторы</h3>
+      <div class="realtors__list">
+        <img src="img/realtor-1.jpeg" alt="Realtor 1" class="realtors__img" />
+        <div class="realtors__details">
+          <h4 class="heading-4 heading-4--light">Пётр Иванов</h4>
+          <p class="realtors__sold">245 домов продано</p>
+        </div>
 
-         <img src="img/realtor-2.jpeg" alt="Realtor 2" class="realtors__img">
-         <div class="realtors__details">
-             <h4 class="heading-4 heading-4--light">Екатерина Смирнова</h4>
-             <p class="realtors__sold">212 домов продано</p>
-         </div>
+        <img src="img/realtor-2.jpeg" alt="Realtor 2" class="realtors__img" />
+        <div class="realtors__details">
+          <h4 class="heading-4 heading-4--light">Екатерина Смирнова</h4>
+          <p class="realtors__sold">212 домов продано</p>
+        </div>
 
-         <img src="img/realtor-5.jpg" alt="Realtor 3" class="realtors__img">
-         <div class="realtors__details">
-             <h4 class="heading-4 heading-4--light">Александр Семёнов</h4>
-             <p class="realtors__sold">198 домов продано</p>
-         </div>
-     </div>
-
+        <img src="img/realtor-5.jpg" alt="Realtor 3" class="realtors__img" />
+        <div class="realtors__details">
+          <h4 class="heading-4 heading-4--light">Александр Семёнов</h4>
+          <p class="realtors__sold">198 домов продано</p>
+        </div>
+      </div>
     </div>
 
     <section class="features">
@@ -81,7 +131,8 @@
         </svg>
         <h4 class="heading-4 heading-4--dark">Самые роскошные в мире дома</h4>
         <p class="feature__text">
-         Начиная от уютного загородного дома до настоящего дворца. Всё что Вы пожелаете!
+          Начиная от уютного загородного дома до настоящего дворца. Всё что Вы
+          пожелаете!
         </p>
       </div>
       <div class="feature">
@@ -90,14 +141,17 @@
         </svg>
         <h4 class="heading-4 heading-4--dark">Только лучшая недвижимость</h4>
         <p class="feature__text">
-            Стоимость дома стартует от $500,000. Мы выбираем для Вас только топовую недвижимость.
+          Стоимость дома стартует от $500,000. Мы выбираем для Вас только
+          топовую недвижимость.
         </p>
       </div>
       <div class="feature">
         <svg class="feature__icon">
           <use xlink:href="img/sprite.svg#icon-map-pin"></use>
         </svg>
-        <h4 class="heading-4 heading-4--dark">Все дома в лучших местах планеты</h4>
+        <h4 class="heading-4 heading-4--dark">
+          Все дома в лучших местах планеты
+        </h4>
         <p class="feature__text">
           Недвижимость в США, Канаде, Германии и многих других странах.
         </p>
@@ -108,7 +162,8 @@
         </svg>
         <h4 class="heading-4 heading-4--dark">Новый дом за одну неделю</h4>
         <p class="feature__text">
-          Наша оперативная работа позволяет Вам насладиться новым домом уже через одну неделю!
+          Наша оперативная работа позволяет Вам насладиться новым домом уже
+          через одну неделю!
         </p>
       </div>
       <div class="feature">
@@ -116,9 +171,11 @@
           <use xlink:href="img/sprite.svg#icon-presentation"></use>
         </svg>
         <h4 class="heading-4 heading-4--dark">
-            Топ 1% риэлторов</h4>
+          Топ 1% риэлторов
+        </h4>
         <p class="feature__text">
-         У Нас работают только лучшие специалисты в своей области. Сотрудничая с EliteHomes вы убедитесь в этом.
+          У Нас работают только лучшие специалисты в своей области. Сотрудничая
+          с EliteHomes вы убедитесь в этом.
         </p>
       </div>
       <div class="feature">
@@ -126,9 +183,11 @@
           <use xlink:href="img/sprite.svg#icon-lock"></use>
         </svg>
         <h4 class="heading-4 heading-4--dark">
-            Безопасные платежи через EliteHomes</h4>
+          Безопасные платежи через EliteHomes
+        </h4>
         <p class="feature__text">
-            Передача информации происходит по закрытым банковским сетям, имеющим наивысший уровень надежности.
+          Передача информации происходит по закрытым банковским сетям, имеющим
+          наивысший уровень надежности.
         </p>
       </div>
     </section>
@@ -148,15 +207,19 @@
 
     <div class="story__content">
       <h3 class="heading-3 mb-sm">
-          Счастливые Клиенты</h3>
+        Счастливые Клиенты
+      </h3>
       <h2 class="heading-2 heading-2--dark mb-md">
-        &ldquo;
-        Лучшее решение в нашей жизни&rdquo;
+        &ldquo; Лучшее решение в нашей жизни&rdquo;
       </h2>
       <p class="story__text">
-        Наша семья около полугода искала подходящий дом, пока мы не начали сотрудничать с EliteHomes. В течении первой же недели был найдет тот вариант, который нам подходил. Риэлторы быстро помогли с переездом и оплатой. Тем кто не хочет лишних заморочек советуем обращаться в EliteHomes
+        Наша семья около полугода искала подходящий дом, пока мы не начали
+        сотрудничать с EliteHomes. В течении первой же недели был найдет тот
+        вариант, который нам подходил. Риэлторы быстро помогли с переездом и
+        оплатой. Тем кто не хочет лишних заморочек советуем обращаться в
+        EliteHomes
       </p>
-      <button class="btn">Найти свое жилье</button>
+      <button id="open" class="btn cta-btn">Найти свое жилье</button>
     </div>
 
     <section class="homes">
@@ -167,262 +230,288 @@
         </svg>
         <h5 class="home__name">Красивый Cемейный Дом</h5>
         <div class="home__location">
-                <svg>
-                        <use xlink:href="img/sprite.svg#icon-map-pin"></use>
-                      </svg>
-                      <p>США</p>
+          <svg>
+            <use xlink:href="img/sprite.svg#icon-map-pin"></use>
+          </svg>
+          <p>США</p>
         </div>
         <div class="home__rooms">
-                <svg>
-                        <use xlink:href="img/sprite.svg#icon-profile-male"></use>
-                      </svg>
-                      <p>5 комнат</p>
+          <svg>
+            <use xlink:href="img/sprite.svg#icon-profile-male"></use>
+          </svg>
+          <p>5 комнат</p>
         </div>
         <div class="home__area">
-                <svg>
-                        <use xlink:href="img/sprite.svg#icon-expand"></use>
-                      </svg>
-                      <p>325 m<sup>2</sup></p>
+          <svg>
+            <use xlink:href="img/sprite.svg#icon-expand"></use>
+          </svg>
+          <p>325 m<sup>2</sup></p>
         </div>
         <div class="home__price">
-                <svg>
-                        <use xlink:href="img/sprite.svg#icon-key"></use>
-                      </svg>
-                      <p>$1,200,000</p>
+          <svg>
+            <use xlink:href="img/sprite.svg#icon-key"></use>
+          </svg>
+          <p>$1,200,000</p>
         </div>
         <button class="btn home__btn">Связаться с риэлтором</button>
       </div>
 
       <div class="home">
-            <img src="img/house-1.jpeg" alt="House 2" class="home__img" />
-            <svg class="home__like">
-              <use xlink:href="img/sprite.svg#icon-heart-full"></use>
-            </svg>
-            <h5 class="home__name">Современная Вилла из Стекла</h5>
-            <div class="home__location">
-                    <svg>
-                            <use xlink:href="img/sprite.svg#icon-map-pin"></use>
-                          </svg>
-                          <p>Канада</p>
-            </div>
-            <div class="home__rooms">
-                    <svg>
-                            <use xlink:href="img/sprite.svg#icon-profile-male"></use>
-                          </svg>
-                          <p>6 комнат</p>
-            </div>
-            <div class="home__area">
-                    <svg>
-                            <use xlink:href="img/sprite.svg#icon-expand"></use>
-                          </svg>
-                          <p>450 m<sup>2</sup></p>
-            </div>
-            <div class="home__price">
-                    <svg>
-                            <use xlink:href="img/sprite.svg#icon-key"></use>
-                          </svg>
-                          <p>$2,750,000</p>
-            </div>
-            <button class="btn home__btn">Связаться с риэлтором</button>
-          </div>
+        <img src="img/house-1.jpeg" alt="House 2" class="home__img" />
+        <svg class="home__like">
+          <use xlink:href="img/sprite.svg#icon-heart-full"></use>
+        </svg>
+        <h5 class="home__name">Современная Вилла из Стекла</h5>
+        <div class="home__location">
+          <svg>
+            <use xlink:href="img/sprite.svg#icon-map-pin"></use>
+          </svg>
+          <p>Канада</p>
+        </div>
+        <div class="home__rooms">
+          <svg>
+            <use xlink:href="img/sprite.svg#icon-profile-male"></use>
+          </svg>
+          <p>6 комнат</p>
+        </div>
+        <div class="home__area">
+          <svg>
+            <use xlink:href="img/sprite.svg#icon-expand"></use>
+          </svg>
+          <p>450 m<sup>2</sup></p>
+        </div>
+        <div class="home__price">
+          <svg>
+            <use xlink:href="img/sprite.svg#icon-key"></use>
+          </svg>
+          <p>$2,750,000</p>
+        </div>
+        <button class="btn home__btn">Связаться с риэлтором</button>
+      </div>
 
-          <div class="home">
-                <img src="img/house-2.jpeg" alt="House 3" class="home__img" />
-                <svg class="home__like">
-                  <use xlink:href="img/sprite.svg#icon-heart-full"></use>
-                </svg>
-                <h5 class="home__name">Уютный Загородный Дом</h5>
-                <div class="home__location">
-                        <svg>
-                                <use xlink:href="img/sprite.svg#icon-map-pin"></use>
-                              </svg>
-                              <p>Великобритания</p>
-                </div>
-                <div class="home__rooms">
-                        <svg>
-                                <use xlink:href="img/sprite.svg#icon-profile-male"></use>
-                              </svg>
-                              <p>4 комнаты</p>
-                </div>
-                <div class="home__area">
-                        <svg>
-                                <use xlink:href="img/sprite.svg#icon-expand"></use>
-                              </svg>
-                              <p>250 m<sup>2</sup></p>
-                </div>
-                <div class="home__price">
-                        <svg>
-                                <use xlink:href="img/sprite.svg#icon-key"></use>
-                              </svg>
-                              <p>$850,000</p>
-                </div>
-                <button class="btn home__btn">Связаться с риэлтором</button>
-              </div>
+      <div class="home">
+        <img src="img/house-2.jpeg" alt="House 3" class="home__img" />
+        <svg class="home__like">
+          <use xlink:href="img/sprite.svg#icon-heart-full"></use>
+        </svg>
+        <h5 class="home__name">Уютный Загородный Дом</h5>
+        <div class="home__location">
+          <svg>
+            <use xlink:href="img/sprite.svg#icon-map-pin"></use>
+          </svg>
+          <p>Великобритания</p>
+        </div>
+        <div class="home__rooms">
+          <svg>
+            <use xlink:href="img/sprite.svg#icon-profile-male"></use>
+          </svg>
+          <p>4 комнаты</p>
+        </div>
+        <div class="home__area">
+          <svg>
+            <use xlink:href="img/sprite.svg#icon-expand"></use>
+          </svg>
+          <p>250 m<sup>2</sup></p>
+        </div>
+        <div class="home__price">
+          <svg>
+            <use xlink:href="img/sprite.svg#icon-key"></use>
+          </svg>
+          <p>$850,000</p>
+        </div>
+        <button class="btn home__btn">Связаться с риэлтором</button>
+      </div>
 
-              <div class="home">
-                    <img src="img/house-3.jpeg" alt="House 4" class="home__img" />
-                    <svg class="home__like">
-                      <use xlink:href="img/sprite.svg#icon-heart-full"></use>
-                    </svg>
-                    <h5 class="home__name">Большая Деревенская Вилла</h5>
-                    <div class="home__location">
-                            <svg>
-                                    <use xlink:href="img/sprite.svg#icon-map-pin"></use>
-                                  </svg>
-                                  <p>Португалия</p>
-                    </div>
-                    <div class="home__rooms">
-                            <svg>
-                                    <use xlink:href="img/sprite.svg#icon-profile-male"></use>
-                                  </svg>
-                                  <p>6 комнат</p>
-                    </div>
-                    <div class="home__area">
-                            <svg>
-                                    <use xlink:href="img/sprite.svg#icon-expand"></use>
-                                  </svg>
-                                  <p>480 m<sup>2</sup></p>
-                    </div>
-                    <div class="home__price">
-                            <svg>
-                                    <use xlink:href="img/sprite.svg#icon-key"></use>
-                                  </svg>
-                                  <p>$1,950,000</p>
-                    </div>
-                    <button class="btn home__btn">Связаться с риэлтором</button>
-                  </div>
+      <div class="home">
+        <img src="img/house-3.jpeg" alt="House 4" class="home__img" />
+        <svg class="home__like">
+          <use xlink:href="img/sprite.svg#icon-heart-full"></use>
+        </svg>
+        <h5 class="home__name">Большая Деревенская Вилла</h5>
+        <div class="home__location">
+          <svg>
+            <use xlink:href="img/sprite.svg#icon-map-pin"></use>
+          </svg>
+          <p>Португалия</p>
+        </div>
+        <div class="home__rooms">
+          <svg>
+            <use xlink:href="img/sprite.svg#icon-profile-male"></use>
+          </svg>
+          <p>6 комнат</p>
+        </div>
+        <div class="home__area">
+          <svg>
+            <use xlink:href="img/sprite.svg#icon-expand"></use>
+          </svg>
+          <p>480 m<sup>2</sup></p>
+        </div>
+        <div class="home__price">
+          <svg>
+            <use xlink:href="img/sprite.svg#icon-key"></use>
+          </svg>
+          <p>$1,950,000</p>
+        </div>
+        <button class="btn home__btn">Связаться с риэлтором</button>
+      </div>
 
-                  <div class="home">
-                        <img src="img/house-4.jpeg" alt="House 5" class="home__img" />
-                        <svg class="home__like">
-                          <use xlink:href="img/sprite.svg#icon-heart-full"></use>
-                        </svg>
-                        <h5 class="home__name">Величественный Дворец</h5>
-                        <div class="home__location">
-                                <svg>
-                                        <use xlink:href="img/sprite.svg#icon-map-pin"></use>
-                                      </svg>
-                                      <p>Германия</p>
-                        </div>
-                        <div class="home__rooms">
-                                <svg>
-                                        <use xlink:href="img/sprite.svg#icon-profile-male"></use>
-                                      </svg>
-                                      <p>12 комнат</p>
-                        </div>
-                        <div class="home__area">
-                                <svg>
-                                        <use xlink:href="img/sprite.svg#icon-expand"></use>
-                                      </svg>
-                                      <p>1500 m<sup>2</sup></p>
-                        </div>
-                        <div class="home__price">
-                                <svg>
-                                        <use xlink:href="img/sprite.svg#icon-key"></use>
-                                      </svg>
-                                      <p>$9,500,000</p>
-                        </div>
-                        <button class="btn home__btn">Связаться с риэлтором</button>
-                      </div>
+      <div class="home">
+        <img src="img/house-4.jpeg" alt="House 5" class="home__img" />
+        <svg class="home__like">
+          <use xlink:href="img/sprite.svg#icon-heart-full"></use>
+        </svg>
+        <h5 class="home__name">Величественный Дворец</h5>
+        <div class="home__location">
+          <svg>
+            <use xlink:href="img/sprite.svg#icon-map-pin"></use>
+          </svg>
+          <p>Германия</p>
+        </div>
+        <div class="home__rooms">
+          <svg>
+            <use xlink:href="img/sprite.svg#icon-profile-male"></use>
+          </svg>
+          <p>12 комнат</p>
+        </div>
+        <div class="home__area">
+          <svg>
+            <use xlink:href="img/sprite.svg#icon-expand"></use>
+          </svg>
+          <p>1500 m<sup>2</sup></p>
+        </div>
+        <div class="home__price">
+          <svg>
+            <use xlink:href="img/sprite.svg#icon-key"></use>
+          </svg>
+          <p>$9,500,000</p>
+        </div>
+        <button class="btn home__btn">Связаться с риэлтором</button>
+      </div>
 
-                      <div class="home">
-                            <img src="img/house-5.jpeg" alt="House 6" class="home__img" />
-                            <svg class="home__like">
-                              <use xlink:href="img/sprite.svg#icon-heart-full"></use>
-                            </svg>
-                            <h5 class="home__name">Современные Аппартаменты</h5>
-                            <div class="home__location">
-                                    <svg>
-                                            <use xlink:href="img/sprite.svg#icon-map-pin"></use>
-                                          </svg>
-                                          <p>Италия</p>
-                            </div>
-                            <div class="home__rooms">
-                                    <svg>
-                                            <use xlink:href="img/sprite.svg#icon-profile-male"></use>
-                                          </svg>
-                                          <p>4 комнаты</p>
-                            </div>
-                            <div class="home__area">
-                                    <svg>
-                                            <use xlink:href="img/sprite.svg#icon-expand"></use>
-                                          </svg>
-                                          <p>180 m<sup>2</sup></p>
-                            </div>
-                            <div class="home__price">
-                                    <svg>
-                                            <use xlink:href="img/sprite.svg#icon-key"></use>
-                                          </svg>
-                                          <p>$700,000</p>
-                            </div>
-                            <button class="btn home__btn ">Связаться с риэлтором</button>
-                          </div>
-
-      
+      <div class="home">
+        <img src="img/house-5.jpeg" alt="House 6" class="home__img" />
+        <svg class="home__like">
+          <use xlink:href="img/sprite.svg#icon-heart-full"></use>
+        </svg>
+        <h5 class="home__name">Современные Аппартаменты</h5>
+        <div class="home__location">
+          <svg>
+            <use xlink:href="img/sprite.svg#icon-map-pin"></use>
+          </svg>
+          <p>Италия</p>
+        </div>
+        <div class="home__rooms">
+          <svg>
+            <use xlink:href="img/sprite.svg#icon-profile-male"></use>
+          </svg>
+          <p>4 комнаты</p>
+        </div>
+        <div class="home__area">
+          <svg>
+            <use xlink:href="img/sprite.svg#icon-expand"></use>
+          </svg>
+          <p>180 m<sup>2</sup></p>
+        </div>
+        <div class="home__price">
+          <svg>
+            <use xlink:href="img/sprite.svg#icon-key"></use>
+          </svg>
+          <p>$700,000</p>
+        </div>
+        <button class="btn home__btn">Связаться с риэлтором</button>
+      </div>
     </section>
 
     <section class="gallery">
-        <figure class="gallery__item gallery__item--1">
-            <img src="img/gal-1.jpeg" alt="Gallery image 1" class="gallery__img">
-        </figure>
-        <figure class="gallery__item gallery__item--2">
-            <img src="img/gal-2.jpeg" alt="Gallery image 2" class="gallery__img">
-        </figure>
-        <figure class="gallery__item gallery__item--3">
-            <img src="img/gal-3.jpeg" alt="Gallery image 3" class="gallery__img">
-        </figure>
-        <figure class="gallery__item gallery__item--4">
-            <img src="img/gal-4.jpeg" alt="Gallery image 4" class="gallery__img">
-        </figure>
-        <figure class="gallery__item gallery__item--5">
-            <img src="img/gal-5.jpeg" alt="Gallery image 5" class="gallery__img">
-        </figure>
-        <figure class="gallery__item gallery__item--6">
-            <img src="img/gal-6.jpeg" alt="Gallery image 6" class="gallery__img">
-        </figure>
-        <figure class="gallery__item gallery__item--7">
-            <img src="img/gal-7.jpeg" alt="Gallery image 7" class="gallery__img">
-        </figure>
-        <figure class="gallery__item gallery__item--8">
-            <img src="img/gal-8.jpeg" alt="Gallery image 8" class="gallery__img">
-        </figure>
-        <figure class="gallery__item gallery__item--9">
-            <img src="img/gal-9.jpeg" alt="Gallery image 9" class="gallery__img">
-        </figure>
-        <figure class="gallery__item gallery__item--10">
-            <img src="img/gal-10.jpeg" alt="Gallery image 10" class="gallery__img">
-        </figure>
-        <figure class="gallery__item gallery__item--11">
-            <img src="img/gal-11.jpeg" alt="Gallery image 11" class="gallery__img">
-        </figure>
-        <figure class="gallery__item gallery__item--12">
-            <img src="img/gal-12.jpeg" alt="Gallery image 12" class="gallery__img">
-        </figure>
-        <figure class="gallery__item gallery__item--13">
-            <img src="img/gal-13.jpeg" alt="Gallery image 13" class="gallery__img">
-        </figure>
-        <figure class="gallery__item gallery__item--14">
-            <img src="img/gal-14.jpeg" alt="Gallery image 14" class="gallery__img">
-        </figure>
+      <figure class="gallery__item gallery__item--1">
+        <img src="img/gal-1.jpeg" alt="Gallery image 1" class="gallery__img" />
+      </figure>
+      <figure class="gallery__item gallery__item--2">
+        <img src="img/gal-2.jpeg" alt="Gallery image 2" class="gallery__img" />
+      </figure>
+      <figure class="gallery__item gallery__item--3">
+        <img src="img/gal-3.jpeg" alt="Gallery image 3" class="gallery__img" />
+      </figure>
+      <figure class="gallery__item gallery__item--4">
+        <img src="img/gal-4.jpeg" alt="Gallery image 4" class="gallery__img" />
+      </figure>
+      <figure class="gallery__item gallery__item--5">
+        <img src="img/gal-5.jpeg" alt="Gallery image 5" class="gallery__img" />
+      </figure>
+      <figure class="gallery__item gallery__item--6">
+        <img src="img/gal-6.jpeg" alt="Gallery image 6" class="gallery__img" />
+      </figure>
+      <figure class="gallery__item gallery__item--7">
+        <img src="img/gal-7.jpeg" alt="Gallery image 7" class="gallery__img" />
+      </figure>
+      <figure class="gallery__item gallery__item--8">
+        <img src="img/gal-8.jpeg" alt="Gallery image 8" class="gallery__img" />
+      </figure>
+      <figure class="gallery__item gallery__item--9">
+        <img src="img/gal-9.jpeg" alt="Gallery image 9" class="gallery__img" />
+      </figure>
+      <figure class="gallery__item gallery__item--10">
+        <img
+          src="img/gal-10.jpeg"
+          alt="Gallery image 10"
+          class="gallery__img"
+        />
+      </figure>
+      <figure class="gallery__item gallery__item--11">
+        <img
+          src="img/gal-11.jpeg"
+          alt="Gallery image 11"
+          class="gallery__img"
+        />
+      </figure>
+      <figure class="gallery__item gallery__item--12">
+        <img
+          src="img/gal-12.jpeg"
+          alt="Gallery image 12"
+          class="gallery__img"
+        />
+      </figure>
+      <figure class="gallery__item gallery__item--13">
+        <img
+          src="img/gal-13.jpeg"
+          alt="Gallery image 13"
+          class="gallery__img"
+        />
+      </figure>
+      <figure class="gallery__item gallery__item--14">
+        <img
+          src="img/gal-14.jpeg"
+          alt="Gallery image 14"
+          class="gallery__img"
+        />
+      </figure>
 
-        <!-- (figure.gallery__item.gallery__item--$>img.gallery__img[src="img/gal-$.jpeg"][alt="Gallery image$"])*14 -->
-      
+      <!-- (figure.gallery__item.gallery__item--$>img.gallery__img[src="img/gal-$.jpeg"][alt="Gallery image$"])*14 -->
     </section>
 
     <footer class="footer">
       <ul class="nav">
-          <li class="nav__item"><a href="#" class="nav__link">
-              Найти дом своей мечты</a></li>
-          <li class="nav__item"><a href="#" class="nav__link">Запросить предложение</a></li>
-          <li class="nav__item"><a href="#" class="nav__link">
-              Скачать планировщик дома</a></li>
-          <li class="nav__item"><a href="#" class="nav__link">Связаться с нами</a></li>
-          <li class="nav__item"><a href="#" class="nav__link">Продать вашу собственность</a></li>
-          <li class="nav__item"><a href="#" class="nav__link">Приходите работать с нами</a></li>
+        <li class="nav__item">
+          <a href="#" class="nav__link"> Найти дом своей мечты</a>
+        </li>
+        <li class="nav__item">
+          <a href="#" class="nav__link">Запросить предложение</a>
+        </li>
+        <li class="nav__item">
+          <a href="#" class="nav__link"> Скачать планировщик дома</a>
+        </li>
+        <li class="nav__item">
+          <a href="#" class="nav__link">Связаться с нами</a>
+        </li>
+        <li class="nav__item">
+          <a href="#" class="nav__link">Продать вашу собственность</a>
+        </li>
+        <li class="nav__item">
+          <a href="#" class="nav__link">Приходите работать с нами</a>
+        </li>
       </ul>
       <p class="copyright">&copy; Все права защищены. Денис Миронов. 2019</p>
     </footer>
-    <script src="script.js"></script>
+    <script src="app.js"></script>
   </body>
 </html>
-
